@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="qdu software">
+    <title>JavaScript DOM；21软件创新班</title>
+    <base href="" target="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            height: 128px;
+            line-height: 128px;
+            border-bottom: solid 2px red;
+        }
+
+        #nav {
+            height: 64px;
+            border-bottom: solid 2px red;
+        }
+
+        #nav ul li {
+            display: inline-block;
+            width: 128px;
+            line-height: 64px;
+        }
+
+        #nav ul li:hover {
+            background-color: #ddd;
+        }
+
+        #content div {
+            width: 512px;
+            height: 256px;
+            margin: auto;
+            border: solid 2px #999;
+            font-size: 3em;
+        }
+
+        @keyframes boxanimation {
+            0% {
+                transform: translateX(0)
+            }
+
+            50% {
+                transform: translateX(412px)
+            }
+
+            100% {
+                transform: translateX(0)
+            }
+        }
+
+        #content #animation-box {
+            position: relative;
+            left: -205px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: boxanimation 3s linear infinite;
+        }
+
+        #footer {
+            height: 64px;
+            border-top: solid 2px red;
+        }
+
+        #maindiv {
+            display: block;
+        }
+
+        #movediv {
+            display: none;
+        }
+
+        #clickdiv {
+            display: none;
+        }
+
+        #animationdiv {
+            display: none;
+        }
+    </style>
+    <script>
+        function hideAll() {
+            document.getElementById("maindiv").style.display = "none";
+            document.getElementById("movediv").style.display = "none";
+            document.getElementById("clickdiv").style.display = "none";
+            document.getElementById("animationdiv").style.display = "none";
+        }
+        function showDiv(div_name) {
+            hideAll();
+            let div_block = document.getElementById(div_name);
+            div_block.style.display = "block";
+        }
+        function changeColor(div_name) {
+            let div_block = document.getElementById(div_name);
+            let r = parseInt(Math.random() * 255), g = parseInt(Math.random() * 255), b = parseInt(Math.random() * 255);
+            div_block.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+        var click_time = 0;
+        function clickCount() {
+            document.getElementById("clickdiv").innerHTML = `${++click_time}`;
+        }
+        function playStart() {
+            let player = document.getElementById("animation-box");
+            player.style.animationPlayState = '';
+        }
+        function playPause() {
+            let player = document.getElementById("animation-box");
+            player.style.animationPlayState = 'paused';
+        }
+    </script>
+    <link href="" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>《WEB基础与前端开发》——JavaScript DOM</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <a href="javascript:void(0)" onclick="showDiv('maindiv')">
+                <li id="main">主页</li>
+            </a>
+            <a href="javascript:void(0)" onclick="showDiv('movediv')">
+                <li id="move">鼠标移动</li>
+            </a>
+            <a href="javascript:void(0)" onclick="showDiv('clickdiv')">
+                <li id="click">鼠标点击</li>
+            </a>
+            <a href="javascript:void(0)" onclick="showDiv('animationdiv')">
+                <li id="animation">动画播放</li>
+            </a>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="maindiv" onmousemove="changeColor('maindiv')">主页</div>
+        <div id="movediv" onmouseover="changeColor('movediv')">鼠标移动</div>
+        <div id="clickdiv" onclick="clickCount()">鼠标点击</div>
+        <div id="animationdiv">
+            <div id="animation-box"></div>
+            <button id="start" onclick="playStart()">开始播放</button>
+            <button id="pause" onclick="playPause()">暂停播放</button>
+        </div>
+    </div>
+    <div id="footer">
+        <address>青岛大学 计算机科学技术学院 2021级软件创新班</address>
+    </div>
+</body>
+
+</html>

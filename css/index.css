@@ -1,0 +1,121 @@
+* {
+    /* --lightblack: rgb(50, 50, 50); */
+    --lightblack: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+.container {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:link {
+    color: black;
+}
+
+.page-banner {
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    /* background-color: red; */
+}
+.page-banner .header {
+    color: white;
+    background-color: var(--lightblack);
+}
+.page-title {
+    text-align: center;
+    font-size: 25px;
+}
+.page-title .bold {
+    font-weight: 900;
+    display: inline;
+}
+.navbar * {
+    list-style: none;
+    text-decoration: none;
+    line-height: 8vh;
+    font-weight: 600;
+    font-size: large;
+}
+.navbar {
+    margin: 0px;
+    text-align: right;
+}
+.navbar > ul li {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 8vh;
+    transition-duration: 0.4s;
+    color: var(--lightblack);
+    background-color: white;
+}
+.navbar > ul li > .nav-text {
+    margin-right: 5%
+}
+.navbar li:hover {
+    color: white;
+    background-color: var(--lightblack);
+}
+.navbar li ul {
+    display: none;
+    position: absolute;
+    left: 20vw;
+    top: 0vh;
+}
+.navbar li ul .nav-text {
+    margin-left: 10%;
+}
+.navbar li:hover ul {
+    display: block;
+    width: 10vw;
+    padding: 0;
+    color: white;
+    background-color: white;
+}
+.navbar li ul li {
+    text-align: left;
+}
+.navbar a:link {
+    color: black;
+}
+.navbar a:visited {
+    color: black;
+}
+.navbar li:hover > a:link {
+    color: white;
+}
+.navbar li:hover > a:visited {
+    color: white;
+}
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    bottom: 0%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.page-content {
+    box-sizing: border-box;
+    float: right;
+    width: 80%;
+    height: auto;
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    /* background-color: green; */
+}

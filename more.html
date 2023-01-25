@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/more.css">
+    <title>Web基础与前端开发 课程页面</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-banner">
+            <a href="index.html">
+                <div class="header">
+                    <div class="blank" style="height: 6vh"></div>
+                    <div class="page-title">
+                        <div class="bold">《Web基础与前端开发》<br>课程页面</div>
+                    </div>
+                    <div class="blank" style="height: 5vh"></div>
+                </div>
+            </a>
+            <div class="navbar">
+                <ul>
+                    <a href="404.html">
+                        <li>
+                            <div class="nav-text">在线课程</div>
+                        </li>
+                    </a>
+                    <a href="404.html">
+                        <li>
+                            <div class="nav-text">在线测试</div>
+                        </li>
+                    </a>
+                    <li>
+                        <div class="nav-text">在线答疑</div>
+                        <ul>
+                            <a href="https://www.baidu.com">
+                                <li>
+                                    <div class="nav-text">百度</div>
+                                </li>
+                            </a>
+                            <a href="https://www.bing.com">
+                                <li>
+                                    <div class="nav-text">必应</div>
+                                </li>
+                            </a>
+                        </ul>
+                    </li>
+                    <a href="table.html">
+                        <li>
+                            <div class="nav-text">课程表</div>
+                        </li>
+                    </a>
+                    <li>
+                        <div class="nav-text">精彩案例</div>
+                        <ul>
+                            <a href="example/clock/index.html">
+                                <li>
+                                    <div class="nav-text">CSS时钟</div>
+                                </li>
+                            </a>
+                            <a href="example/jsdom/index.html">
+                                <li>
+                                    <div class="nav-text">JS_DOM示例</div>
+                                </li>
+                            </a>
+                        </ul>
+                    </li>
+                    <a href="form.html">
+                        <li>
+                            <div class="nav-text">课程问卷</div>
+                        </li>
+                    </a>
+                    <a href="more.html">
+                        <li>
+                            <div class="nav-text">关于本站</div>
+                        </li>
+                    </a>
+                </ul>
+                <div class="push" style="padding-bottom: 10vh;"></div>
+            </div>
+            <div class="footer">
+                计算机科学技术学院<br>
+                2022 &copy SamBillon<br>
+            </div>
+        </div>
+        <div class="page-content">
+            <h1>关于本站的更多信息</h1>
+            <p>
+                欢迎您能看到这里。我将在这里和您简要说明本站点各个页面的结构和设计思路。
+            </p>
+            <p>
+                在视觉层面上，本站点尽可能做到简明扼要地提供有效信息。因此，本站点各个页面在设计时均未使用花哨的颜色，而使用简约高效的黑白配色。<br>
+                为减轻黑白配色带来的廉价感，本站导航栏采用设计时变色的CSS效果。当鼠标放上时所选项目将会在0.4s后完成变色，增强了视觉互动效果。
+            </p>
+            <p>
+                代码层面上，本站每页均采用“模板和内容分离”的模块化设计思路。在本站根目录下的template.html文件为每页的通用模板，其中的内容在每页中均是相同的，不同的仅是"page-content"中的内容。<br>
+                本站没有采用iframe。原因是iframe有巨大的劣势：当刷新页面时，iframe的位置将会丢失，将回到初始的位置。我认为这一弊端盖过了使用iframe带来的优点。因此采用了这种代码方式。<br>
+                此种方式的缺点：修改导航栏非常麻烦，需要对每个页面替换修改部分。规避此种缺点的方式也非常简单：如今大型站点均采用前端框架设计，使用前端框架即可实现模块化开发，之后可以由自动化脚本生成每个页面的html和css代码。
+            </p>
+            <p>
+                该站点使用的css也是模块化开发。根目录下的css文件夹中，index.css是导航栏的css样式，每个页面均需包含；另外的css是每个页面独有（或共用）的css，不同页面仅需包含至多一个。因此每个页面仅需加载1~2个css。
+            </p>
+            <p>
+                关于目录，course可以放置在线课程内容相关，本处没有资源，搁置；pics放置图片，example放置精彩案例。
+            </p>
+            <p>
+                还请多批评指正！
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

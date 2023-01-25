@@ -1,0 +1,34 @@
+textarea {
+    resize: none;
+    padding: 2px;
+}
+.form-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 18px;
+}
+.form-container p {
+    margin-bottom: 5%;
+}
+.quest {
+    margin-bottom: 5%;
+}
+.question {
+    margin-bottom: 2%;
+}
+.form-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.form-container input {
+    margin-right: 5px;
+}
+#submit-btn {
+    height: 30px;
+}
+
+.result-container {
+    display: none;
+}
